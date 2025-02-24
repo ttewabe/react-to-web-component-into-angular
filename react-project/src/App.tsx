@@ -1,12 +1,17 @@
-import './App.css';
-import { Settlement } from "./components/Settlement";
+import { RichTextEditor } from "richTextEditor";
+import "./App.css";
+import AppRouter from "./AppRouter";
+import { Settlement } from "evaluation/evaluation-details/settlement";
 
-function App() {
+interface IAppProps {
+  baseHref?: string;
+}
+export default function App({baseHref}: IAppProps) {
   return (
     <div className="App">
-      <Settlement formTitle="Settlement Form" onSave={(amount) => console.log('Save clicked with amount:', amount)} />
+      <Settlement formTitle="Settlment Amont with Area"/>
+      <RichTextEditor />
+      <AppRouter />
     </div>
   );
 }
-
-export default App;
