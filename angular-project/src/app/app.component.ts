@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  formTitle:string = 'Pass React Props to angular components';
+  //for Settlement
+  formTitle:string = 'Pass React Props to angular';
+
+  // SearchBox
+  searchTitle:string = 'Search the Files';
+  onSubmit(event: any) {
+    console.log('Save event triggered:', event.detail);
+  }
 }

@@ -6,10 +6,10 @@ export const EditorContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
-  margin: 20px;
+  height: 100vh;
+  margin: 30px 20px;
 padding: 3px 0;
-  background-color: rgb(58, 58, 58);
+  background-color: rgb(242, 242, 247);
 `;
 
 export const StyledCard = styled.div`

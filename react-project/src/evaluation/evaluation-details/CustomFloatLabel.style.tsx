@@ -51,8 +51,8 @@ export const StyledTextarea = styled.textarea`
 
 export const StyledLabel = styled.label`
   position: absolute;
-  left: 1px;
-  top: 50%;
+  left: 5px;
+  top: 20%;
   transform: translateY(-50%);
   font-size: 16px;
   color: #666;

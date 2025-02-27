@@ -1,6 +1,7 @@
 import { IRichTextEditorProps, RichTextEditor } from "richTextEditor";
 import { ISettlementProps, Settlement } from "../../evaluation/evaluation-details/settlement";
 import { reactToWebComponent } from "./reactToWebComponent";// is utitlity function that wraps the react and registers it as web component.
+import { ISearchBoxProps, SearchBox } from "common-ui/search-box/SearchBox";
 
 
 reactToWebComponent<ISettlementProps>(Settlement, "aw-settlement", {//rigister Settlement component as as a custom web component
@@ -9,4 +10,9 @@ reactToWebComponent<ISettlementProps>(Settlement, "aw-settlement", {//rigister S
 })
 
 reactToWebComponent<IRichTextEditorProps>( RichTextEditor,"aw-rich-text-editor", {
+})
+
+reactToWebComponent<ISearchBoxProps>( SearchBox,"aw-search-box", {
+    searchTitle:"string",
+    onSubmit:"function",
 })

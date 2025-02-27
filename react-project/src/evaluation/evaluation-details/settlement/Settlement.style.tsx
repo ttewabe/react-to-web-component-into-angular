@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledBackground = styled.div`
   margin: 20px;
   padding: 3px 0;
-  background-color: rgb(58, 58, 58);
+  background-color:  rgb(242, 242, 247);
 `;
 
 export const FormContainer = styled.form`
@@ -11,7 +11,7 @@ export const FormContainer = styled.form`
  flex-direction:column;
  row-gap:15px;
  max-width:400px;
- margin:70px auto;
+ margin:7px auto;
  >div>span{
  display:flex;
  flex-direction:column;
@@ -25,6 +25,7 @@ export const StyledError = styled.p`
   color: red;
   font-size: 12px;
   margin-top: -25px;
+  left: auto;
 `;
 
 export const StyledButton = styled.button`

@@ -1,4 +1,8 @@
-aw-settlement{
+aw-settlement, aw-search-box {
     font-size: 25px;
-    color: #f5f7f5;
+    color: #3f0101;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
 }
