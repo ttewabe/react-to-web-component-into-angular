@@ -1,36 +1,42 @@
-
-import React, { useState } from "react";
+import React, { Children, ReactNode, useState } from "react";
 import { StyledTab, StyledTitle, StyledContent } from "./Tabs.style";
 
-
 interface ITabsProps {
-  children: React.ReactElement[];
+  activeIndex?: number;
+  onSelect?: (index: number) => void;
+  children?: ReactNode;
 }
 
-export const Tabs = ({ children }: ITabsProps) => {
-  const [activeTab, setActiveTab] = useState(0);
+export const Tabs = ({ activeIndex = 0, onSelect, children, ...rest }: ITabsProps) => {
+  const [tabIndex, setTabIndex] = useState<number>(activeIndex);
 
   const handleActiveTab = (index: number) => {
-    setActiveTab(index)
-  }
+    setTabIndex(index);
+    onSelect?.(index);
+  };
+
+  const tabs = Children.toArray(children).map((child: any, index: number) => {
+    const label = child.props.title;
+
+    return (
+      <div
+        key={index}
+        tabIndex={0}
+        onClick={() => handleActiveTab(index)}
+        className={`tabs-tab ${index === tabIndex ? "active" : ""}`}
+        title={label}
+      >
+        {label}
+      </div>
+    );
+  });
+
+  const activeTabContent = Children.toArray(children)[tabIndex] as React.ReactElement | undefined;
 
   return (
-    <StyledTab>
-      <StyledTitle>
-        {children.map((tab, index) => (
-          <button
-            type="button"
-            key={index}
-            onClick={() => handleActiveTab(index)}
-            className={activeTab ===index? "active": ""}
-          >
-            {tab.props.title}
-          </button>
-        ))}
-      </StyledTitle>
-      <StyledContent>
-      {children[activeTab]}
-      </StyledContent>
+    <StyledTab {...rest}>
+      <StyledTitle className="tabs-title">{tabs}</StyledTitle>
+      <StyledContent>{activeTabContent}</StyledContent>
     </StyledTab>
   );
 };
