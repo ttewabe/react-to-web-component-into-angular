@@ -12,11 +12,11 @@ interface IAppProps {
 export default function App({ baseHref }: IAppProps) {
   return (
     <div className="App">
-      <TabValue />
       <SearchBox
         searchTitle="Search"
         onSubmit={(value) => console.log(value)}
       />
+      <TabValue />
       <MaskedInput label="Phone Number" />
       <Settlement formTitle="Settlment Amont with Area" />
       <RichTextEditor />

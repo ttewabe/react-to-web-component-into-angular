@@ -36,9 +36,10 @@ export const StyledTitle = styled.div`
 `;
 
 export const StyledContent = styled.div`
-  margin: 2px 20px;
-  padding: 15px;
-  height: 70vh;
+  margin: 12px 30px;
+  padding: 25px;
+  width: 95%; 
+  height: 60vh;
   min-height: 100px;
   font-size: 16px;
   border: 1px solid #ddd;
