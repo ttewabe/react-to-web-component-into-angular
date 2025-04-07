@@ -1,10 +1,10 @@
-import { render,screen } from "@testing-library/react"
-import { Settlement } from "./Settlement"
+import { render, screen } from "@testing-library/react"
+import { SettlementPage } from "./Settlement"
 
 
 describe('Settlement', () => {
     test('renders without crashing', () => {
-        render(<Settlement />)
+        render(<SettlementPage />)
         expect(screen.getAllByRole("textbox")).toHaveLength(3)
     })
 })

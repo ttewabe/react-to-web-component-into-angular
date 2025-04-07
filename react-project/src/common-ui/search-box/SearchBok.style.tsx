@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const SearchBoxContainer = styled.div`
-margin: 20px;
+margin: 0 10px;
 padding: 3px 0;
 background-color:  rgb(242, 242, 247);
 height: 100vh;

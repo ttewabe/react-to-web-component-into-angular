@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const StyledBackground = styled.div`
-  margin: 20px;
-  padding: 3px 0;
+  margin: 0 10px;
+  padding: 20px 0;
+  height: 100vh;
   background-color:  rgb(242, 242, 247);
 `;
 

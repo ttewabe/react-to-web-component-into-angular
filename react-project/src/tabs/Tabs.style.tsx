@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledTab = styled.div`
-  margin: 30px;
+margin: 0 10px;
   height: 100vh;
   background-color: rgb(242, 242, 247);
 `;

@@ -2,16 +2,16 @@ import { useState } from "react";
 import { EditorContainer, StyledCard, StyledEditor } from "./RichTextEditor.style";
 
 export interface IRichTextEditorProps {
-  
-}
-export const RichTextEditor =({}:IRichTextEditorProps)=>{
-const [text, setText] = useState<string>('');
 
-const handleSetText =(e:any)=>{
-  setText(e.htmlValue);
 }
+export const RichTextEditorPage = ({ }: IRichTextEditorProps) => {
+  const [text, setText] = useState<string>('');
 
-return (
+  const handleSetText = (e: any) => {
+    setText(e.htmlValue);
+  }
+
+  return (
     <EditorContainer>
       <StyledCard>
         <StyledEditor

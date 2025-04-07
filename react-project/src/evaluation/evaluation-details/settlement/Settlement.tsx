@@ -8,7 +8,7 @@ export interface ISettlementProps {
   formTitle?: string;
 }
 
-export const Settlement = ({formTitle}: ISettlementProps) => {
+export const SettlementPage = ({ formTitle }: ISettlementProps) => {
   const initialValues = {
     settlementAmount: "",
     settlementDate: "",
@@ -46,7 +46,7 @@ export const Settlement = ({formTitle}: ISettlementProps) => {
             onBlur={handleBlur}
             label="Settlement Amount"
           />
-          {touched.settlementAmount && errors.settlementAmount && 
+          {touched.settlementAmount && errors.settlementAmount &&
             <StyledError>{errors.settlementAmount}</StyledError>}
         </div>
 
@@ -59,7 +59,7 @@ export const Settlement = ({formTitle}: ISettlementProps) => {
             onBlur={handleBlur}
             label="Settlement Date"
           />
-          {touched.settlementDate && errors.settlementDate && 
+          {touched.settlementDate && errors.settlementDate &&
             <StyledError>{errors.settlementDate}</StyledError>}
         </div>
 
@@ -72,7 +72,7 @@ export const Settlement = ({formTitle}: ISettlementProps) => {
             onBlur={handleBlur}
             label="Accepted Liability"
           />
-          {touched.acceptedLiability && errors.acceptedLiability && 
+          {touched.acceptedLiability && errors.acceptedLiability &&
             <StyledError>{errors.acceptedLiability}</StyledError>}
         </div>
 

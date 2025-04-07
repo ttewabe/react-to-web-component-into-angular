@@ -6,7 +6,7 @@ export interface ITextFieldProps {
   label: string;
 }
 
-export const MaskedInput = ({ label }: ITextFieldProps) => {
+export const TextFieldMaskedPage = ({ label }: ITextFieldProps) => {
   const [phone, setPhone] = useState("");
 
   const handleChange = (e: any) => {

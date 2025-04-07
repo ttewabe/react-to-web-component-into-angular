@@ -3,11 +3,11 @@ import { Editor } from "primereact/editor";
 
 
 export const EditorContainer = styled.div`
+margin: 0 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 30px 20px;
 padding: 3px 0;
   background-color: rgb(242, 242, 247);
 `;

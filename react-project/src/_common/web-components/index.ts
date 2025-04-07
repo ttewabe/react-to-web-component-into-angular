@@ -1,29 +1,36 @@
-import { IRichTextEditorProps, RichTextEditor } from "richTextEditor";
+import { IRichTextEditorProps, RichTextEditorPage } from "richTextEditor";
 import {
   ISettlementProps,
-  Settlement,
+  SettlementPage,
 } from "../../evaluation/evaluation-details/settlement";
 import { reactToWebComponent } from "./reactToWebComponent"; // is utitlity function that wraps the react and registers it as web component.
-import { ISearchBoxProps, SearchBox } from "common-ui/search-box/SearchBox";
-import { MaskedInput, ITextFieldProps } from "common-ui/search-box/TextField";
+import { ISearchBoxProps, SearchBoxPage } from "common-ui/search-box/SearchBox";
+import { TextFieldMaskedPage, ITextFieldProps } from "common-ui/search-box/TextField";
+import { TabPage } from "tabs/Tab";
 
-reactToWebComponent<ISettlementProps>(Settlement, "aw-settlement", {
+reactToWebComponent<ISettlementProps>(SettlementPage, "aw-settlement", {
   //rigister Settlement component as as a custom web component
   formTitle: "string",
   // onSave:"function",
 });
 
 reactToWebComponent<IRichTextEditorProps>(
-  RichTextEditor,
+  RichTextEditorPage,
   "aw-rich-text-editor",
   {}
 );
 
-reactToWebComponent<ISearchBoxProps>(SearchBox, "aw-search-box", {
+reactToWebComponent<ISearchBoxProps>(SearchBoxPage, "aw-search-box", {
   searchTitle: "string",
   onSubmit: "function",
 });
 
-reactToWebComponent<ITextFieldProps>(MaskedInput, "aw-text-field", {
+reactToWebComponent<ITextFieldProps>(TextFieldMaskedPage, "aw-text-field", {
   label: "string",
 });
+
+reactToWebComponent<any>(
+  TabPage,
+  "aw-tab-page",
+  {}
+);

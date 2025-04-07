@@ -17,4 +17,6 @@ export class AppComponent {
 
   // MaskedInput
   label: string = 'Phone Number';
+  // Tabs Component
+  imageUrl: string = '/assets/bridge.png';
 }
