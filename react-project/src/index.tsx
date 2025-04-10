@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import "./index.css";
 import "./_common/web-components/index";
-import 'primereact/resources/themes/lara-light-blue/theme.css';  
-import 'primereact/resources/primereact.min.css';               
+import 'primereact/resources/themes/lara-light-blue/theme.css';
+import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 
 
@@ -16,12 +16,17 @@ const addGlobalErrorHandlers = () => {
 
 addGlobalErrorHandlers();
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App baseHref="/" />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+//fix Minified React error #130
+const container = document.getElementById("root")!;
+
+if (container) {
+  ReactDOM.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    container
+  );
+}
 
 
 
