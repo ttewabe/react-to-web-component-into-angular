@@ -1,3 +1,4 @@
+import ParentComponent from "confirmaton-modal/ParentComponent";
 import "./App.css";
 import AppRouter from "./AppRouter";
 

@@ -8,6 +8,7 @@ import { TabPage } from "tabs/Tab";
 import { Home } from "home/Home";
 import { Textarea } from "text-area/TextArea";
 import "./App.css";
+import ParentComponent from "confirmaton-modal/ParentComponent";
 
 
 export { Link, useHistory, useLocation } from "react-router-dom";
@@ -41,6 +42,7 @@ export const AppRouter = ({ baseHref }: IAppRouterProps) => {
           <li><Link to="/text-field">Text Field</Link></li>
           <li><Link to="/text-area">Text Area</Link></li>
           <li><Link to="/rich-text-editor">RichTextEditor Page</Link></li>
+          <li><Link to="/parent">Confirmation model</Link></li>
         </ul>
       </nav>
       <Switch>
@@ -52,6 +54,7 @@ export const AppRouter = ({ baseHref }: IAppRouterProps) => {
         <Route exact path="/text-field" component={TextFieldMaskedPage} />
         <Route exact path="/text-area" component={Textarea} />
         <Route exact path="/rich-text-editor" component={RichTextEditorPage} />
+        <Route exact path="/parent" component={ParentComponent} />
         <Route path="*" />
         <Redirect to="/" />
       </Switch>
