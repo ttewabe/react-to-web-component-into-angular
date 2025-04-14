@@ -24,9 +24,9 @@ const ParentComponent: React.FC = () => {
     const handleCloseModal = () => setShowModal(false);
 
     return (
-        <div>
+        <div className='parent-component'>
             <div className='button-container'>
-                <h1>Manage Items</h1>
+                <h1 className="center-title">Manage Items</h1>
                 <div className='button-group'>
                     <button onClick={() => handleAction("update")}>Update Item</button>
                     <button onClick={() => handleAction("delete")}>Delete Item</button>

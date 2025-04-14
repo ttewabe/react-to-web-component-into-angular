@@ -1,4 +1,46 @@
-/* ConfirmationModal.css */
+.parent-component{
+  margin: 0 10px;
+  height: 80vh;
+  background-color: rgb(242, 242, 247);
+}
+.center-title{
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(100, 99, 114);
+  margin-top: 20px;
+  font-weight: 600;
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: none;
+}
+
+.button-container {
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  }
+  .button-group{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      padding: 20px;
+      gap: 10px;
+      margin-top: 60vh;
+      width: 100%;
+  }
+  .button-group button {
+    padding: 10px 20px;
+    background-color: #618494;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+
+/* modale style */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -39,28 +81,4 @@
     background-color: #005f99;
   }
   
-  h1 {
-    color: rgb(255, 255, 255);
-  }
-
-  .button-container {
-    width: 97%;
-    height: 80vh;
-    border: 2px solid rgb(6, 236, 248);
-    padding: 10px 20px;
-    margin: 10px 14px;
-    border-radius: 5px;
-    background-color: #6a6a6a;
-    display: block;
-    align-items: center;
-    box-shadow: #f0f0f0 0px 0px 10px;
-    }
-    .button-group{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        gap: 10px;
-         margin-top: 60vh;
-        width: 100%;
-    }
+  

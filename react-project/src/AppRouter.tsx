@@ -9,6 +9,7 @@ import { Home } from "home/Home";
 import { Textarea } from "text-area/TextArea";
 import "./App.css";
 import ParentComponent from "confirmaton-modal/ParentComponent";
+import { useState } from "react";
 
 
 export { Link, useHistory, useLocation } from "react-router-dom";
@@ -31,21 +32,28 @@ interface IAppRouterProps {
 }
 
 export const AppRouter = ({ baseHref }: IAppRouterProps) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <Router basename={baseHref || "/"}>
       <nav className="nav-bar">
-        <ul className="nav-list">
-          <li><Link to="/home">Home</Link></li>
-          <li><Link to="/search-box-page">Search Box Page</Link></li>
-          <li><Link to="/tab">Tab Page</Link></li>
-          <li><Link to="/settlement">Settlement Page</Link></li>
-          <li><Link to="/text-field">Text Field</Link></li>
-          <li><Link to="/text-area">Text Area</Link></li>
-          <li><Link to="/rich-text-editor">RichTextEditor Page</Link></li>
-          <li><Link to="/parent">Confirmation model</Link></li>
+        <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          ☰
+        </button>
+        <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
+          <li><Link to="/home" onClick={() => setMenuOpen(false)}>Home</Link></li>
+          <li><Link to="/search-box-page" onClick={() => setMenuOpen(false)}>Search Box Page</Link></li>
+          <li><Link to="/tab" onClick={() => setMenuOpen(false)}>Tab Page</Link></li>
+          <li><Link to="/settlement" onClick={() => setMenuOpen(false)}>Settlement Page</Link></li>
+          <li><Link to="/text-field" onClick={() => setMenuOpen(false)}>Text Field</Link></li>
+          <li><Link to="/text-area" onClick={() => setMenuOpen(false)}>Text Area</Link></li>
+          <li><Link to="/rich-text-editor" onClick={() => setMenuOpen(false)}>RichTextEditor Page</Link></li>
+          <li><Link to="/parent" onClick={() => setMenuOpen(false)}>Confirmation model</Link></li>
         </ul>
       </nav>
+
       <Switch>
+        {/* Your routes */}
         <Route exact path="/claimants/:claimantId" component={ClaimantPage} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/search-box-page" component={SearchBoxPage} />
@@ -61,5 +69,3 @@ export const AppRouter = ({ baseHref }: IAppRouterProps) => {
     </Router>
   );
 };
-export default AppRouter;
-
