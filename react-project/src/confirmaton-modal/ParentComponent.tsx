@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ConfirmationModal from './ConfirmationModal';
+import { ConfirmationModal } from './ConfirmationModal';
 import './ConfirmationModal.css';
 
 const ParentComponent: React.FC = () => {
@@ -17,7 +17,6 @@ const ParentComponent: React.FC = () => {
             // Perform delete action here
         } else if (actionType === "update") {
             console.log("Item updated");
-            // Perform update action here
         }
         setShowModal(false); // Close modal after confirming
     };
@@ -33,7 +32,6 @@ const ParentComponent: React.FC = () => {
                     <button onClick={() => handleAction("delete")}>Delete Item</button>
                 </div>
             </div>
-
 
             <ConfirmationModal
                 show={showModal}

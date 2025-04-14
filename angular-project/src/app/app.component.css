@@ -3,6 +3,7 @@ aw-search-box,
 aw-tab-page,
 aw-settlement,
 aw-text-field,
+aw-parent-page,
 aw-rich-text-editor {
   display: block;
   margin: 20px auto;
@@ -40,7 +41,20 @@ aw-text-field::ng-deep input {
   border-radius: 4px;
   width: 90%;
 }
+/* Confirmation Modal */
+aw-parent-page{
+  display: block;
+  align-items: center;
+  margin: 20px auto;
+  padding: 10px;
+  width: 90%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.5);
 
+}
+h1{
+  align-items: center;
+}
 /* Style specific to aw-rich-text-editor */
 aw-rich-text-editor::ng-deep .editor-toolbar {
   background-color: #f5f5f5;

@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface ConfirmationModalProps {
+export interface IConfirmationModalProps {
     show: boolean;
     onClose: () => void;
     onConfirm: () => void;
     message: string;
 }
 
-const ConfirmationModal: React.FC<ConfirmationModalProps> = ({ show, onClose, onConfirm, message }) => {
+export const ConfirmationModal: React.FC<IConfirmationModalProps> = ({ show, onClose, onConfirm, message }) => {
     if (!show) return null;
 
     return (
@@ -24,4 +24,3 @@ const ConfirmationModal: React.FC<ConfirmationModalProps> = ({ show, onClose, on
     );
 };
 
-export default ConfirmationModal;

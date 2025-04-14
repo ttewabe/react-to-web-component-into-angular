@@ -8,6 +8,7 @@ import { ISearchBoxProps, SearchBoxPage } from "common-ui/search-box/SearchBox";
 import { TextFieldMaskedPage, ITextFieldProps } from "common-ui/search-box/TextField";
 import { TabPage } from "tabs/Tab";
 import ParentComponent from "confirmaton-modal/ParentComponent";
+import  { IConfirmationModalProps } from "confirmaton-modal/ConfirmationModal";
 
 reactToWebComponent<ISettlementProps>(SettlementPage, "aw-settlement", {
   //rigister Settlement component as as a custom web component
@@ -34,7 +35,10 @@ reactToWebComponent<any>(TabPage, "aw-tab-page", {
   
 });
 
-reactToWebComponent<any>(ParentComponent, "aw-parent", {
-  
+reactToWebComponent<IConfirmationModalProps>(ParentComponent, "aw-parent-page", {
+  show: "boolean",
+  onClose: "function",
+  onConfirm: "function",
+  message: "string",
 });
 
