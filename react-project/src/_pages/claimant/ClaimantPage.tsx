@@ -8,6 +8,8 @@ import { Home } from "home/Home";
 
 export const ClaimantPage = () => {
   return (
+    // we may not render all the components at once, but for now we will render them all to test the layout
+    // and the responsiveness of the components
     <Container>
       <Home />
       <SearchBoxPage
